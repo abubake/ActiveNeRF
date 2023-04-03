@@ -19,10 +19,14 @@ git clone https://github.com/LeapLabTHU/ActiveNeRF.git
 cd ActiveNeRF
 pip install -r requirements.txt
 ```
+We provide a conda environment setup file including all of the above dependencies. Create the conda environment `activenerf` by running:
+```
+conda env create -f environment.yml
+```
 
 ## Quick Start
 
-Download data for example dataset: `hotdog`
+Download data for example dataset: `lego`
 
 ```
 bash download_example_data.sh
@@ -31,7 +35,7 @@ bash download_example_data.sh
 Train ActiveNeRF:
 
 ```
-python run_nerf.py --config configs/hotdog_active.txt --expname active_hotdog --datadir ./data/hotdog
+python run_nerf.py --config configs/lego_active.txt --expname active_lego --datadir ./data/nerf_synthetic/lego
 ```
 
 ## Contact
