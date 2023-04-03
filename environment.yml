@@ -17,4 +17,6 @@ dependencies:
     - tensorboard==1.15.0
     - tqdm
     - pip: # replacing opencv-python
+      - numba
+      - GPUtil
       - opencv-contrib-python==4.6.0.66
