@@ -1,4 +1,5 @@
 # To run: conda env create -f environment.yml
+# FIXME: opencv and torch not working correctly- next change will be putting a specific conda-forge channel for opencv-python/ using cv2
 name: activenerf
 channels:
     - pypi
@@ -7,7 +8,7 @@ channels:
 dependencies:
     - python=3.7
     - pip
-    - torch>=1.4.0
+    - torch==1.4.0
     - torchvision>=0.2.1
     - imageio
     - imageio-ffmpeg
