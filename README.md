@@ -15,14 +15,17 @@ We present a novel learning framework, ActiveNeRF, aiming to model a 3D scene wi
 ## Installation
 
 ```
-git clone https://github.com/LeapLabTHU/ActiveNeRF.git
+git clone https://github.com/abubake/ActiveNeRF.git
 cd ActiveNeRF
-pip install -r requirements.txt
 ```
 We provide a conda environment setup file as analterantive to installing dependencies via requirements.txt. Create the conda environment `activenerf` by running:
 ```
 conda env create -f environment.yml
 conda activate activenerf
+```
+OR
+```
+pip install -r requirements.txt
 ```
 
 ## Quick Start
