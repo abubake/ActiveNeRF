@@ -18,10 +18,26 @@ from load_blender import load_blender_data
 import warnings
 warnings.filterwarnings('ignore')
 
-torch.cuda.empty_cache()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 np.random.seed(0)
 DEBUG = False
+
+from GPUtil import showUtilization as gpu_usage
+from numba import cuda
+
+def free_gpu_cache(): # FIX: added to clear GPU space when starting up
+    print("Initial GPU Usage")
+    gpu_usage()                             
+    torch.cuda.empty_cache()
+    cuda.select_device(0)
+    cuda.close()
+    cuda.select_device(0)
+    print("GPU Usage after emptying the cache")
+    gpu_usage()
+
+free_gpu_cache() 
+
+
 
 
 def batchify(fn, chunk):
