@@ -8,7 +8,7 @@ channels:
 dependencies:
     - python=3.7
     - pip
-    - torch==1.4.0
+    - torch==1.4.0 # changed from being >= to ==
     - torchvision>=0.2.1
     - imageio
     - imageio-ffmpeg
@@ -16,4 +16,5 @@ dependencies:
     - configargparse
     - tensorboard==1.15.0
     - tqdm
-    - opencv-python
+    - pip: # replacing opencv-python
+      - opencv-contrib-python==4.6.0.66
