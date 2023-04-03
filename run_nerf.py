@@ -18,8 +18,8 @@ from load_blender import load_blender_data
 import warnings
 warnings.filterwarnings('ignore')
 
-#device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = torch.device("cpu") # since cuda isn't working
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+#device = torch.device("cpu") # since cuda isn't working # cpu does not work
 np.random.seed(0)
 DEBUG = False
 
