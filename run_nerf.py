@@ -18,6 +18,7 @@ from load_blender import load_blender_data
 import warnings
 warnings.filterwarnings('ignore')
 
+torch.cuda.empty_cache()
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 np.random.seed(0)
 DEBUG = False
