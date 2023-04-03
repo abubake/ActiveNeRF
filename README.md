@@ -35,6 +35,7 @@ Download data for example dataset: `lego`
 ```
 bash download_example_data.sh
 ```
+Then move  "transforms_holdout.json" from "./data/lego" into "./data/lego/nerf_synthetic/lego" which is created when data is downloaded.
 
 Train ActiveNeRF:
 
